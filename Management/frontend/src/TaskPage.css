@@ -1,31 +1,51 @@
-
+/* Task Page container and background */
 .task-page {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start; /* Aligns content at the start of the page */
+  min-height: 100vh; /* Ensures the container takes up at least the full height of the viewport */
   padding: 20px;
+  background: url('https://forums.zenyte.com/uploads/monthly_2021_04/AdmirableDemandingGoitered-max-1mb.gif.3599acefa721bfc970f7f0f88a6ce8d2.gif') no-repeat center center fixed;
+  background-size: cover;
+  color: #5600f5; /* Ensure text color contrasts well with the background */
+  box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
 }
 
+/* Header style */
+h2 {
+  color: #ffffffc5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Task form styling */
 .task-form {
   margin-top: 20px;
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
   width: 100%;
   max-width: 500px;
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
 }
 
 .task-form input,
+.task-form textarea,
 .task-form button {
   margin-top: 10px;
-  width: 100%;
+  width: calc(100% - 16px); /* Full width minus padding */
   padding: 8px;
   font-size: 16px;
+  box-sizing: border-box; /* Ensures padding is included in width calculation */
+}
+
+.task-form textarea {
+  resize: vertical; /* Allows vertical resizing only */
 }
 
 .task-form button {
-  background-color: #4CAF50;
+  background-color: #8923fd;
   color: white;
   border: none;
   border-radius: 3px;
@@ -33,9 +53,10 @@
 }
 
 .task-form button:hover {
-  background-color: #45a049;
+  background-color: #5f0fb9;
 }
 
+/* Task list styling */
 .task-list {
   margin-top: 20px;
   width: 100%;
@@ -48,13 +69,13 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent background */
   margin-top: 10px;
 }
 
 .task-item button {
   margin-left: 5px;
-  background-color: #007bff;
+  background-color: #8923fd;
   color: white;
   border: none;
   border-radius: 3px;
@@ -63,5 +84,59 @@
 }
 
 .task-item button:hover {
-  background-color: #0056b3;
+  background-color: #5f0fb9;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 250px;
+  height: 100%;
+  background-color: #2c2c2c98;
+  color: rgb(211, 9, 252);
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.404);
+  transition: left 0.3s ease;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.sidebar ul li.active,
+.sidebar ul li:hover {
+  color: #ff9000;
+}
+
+.hamburger-menu {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #ffffff;
+  z-index: 1001; /* Ensure it appears above the sidebar */
+}
+
+.hamburger-menu:hover {
+  color: #ff9000;
 }

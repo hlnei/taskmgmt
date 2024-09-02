@@ -1,0 +1,60 @@
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('https://forums.zenyte.com/uploads/monthly_2021_04/AdmirableDemandingGoitered-max-1mb.gif.3599acefa721bfc970f7f0f88a6ce8d2.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.auth-container h2 {
+    margin-bottom: 20px;
+    font-size: 28px; 
+    color: #fff; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+}
+
+.auth-container input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.auth-container button {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #6a1b9a; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.auth-container button:hover {
+    background-color: #4a0072; 
+}
+
+.link-text {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #fff; 
+}
+
+.register-link {
+    color: #ffeb3b; 
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.register-link:hover {
+    color: #c8b900; 
+}
